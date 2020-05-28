@@ -2,39 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6ec455eb-1672-459d-9bab-ff6e5b576f07" name="默认的" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ES6/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MVVM/Dep.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MVVM/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MVVM/compile.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MVVM/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MVVM/observe.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MVVM/watcher.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js手写new操作符.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-app/config-overrides.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-app/src/components/logo/logo.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-app/src/containers/login/login.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-app/src/containers/registry/registry.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-vue/src/components/LayoutHeader.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-vue/src/map.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-vue/src/utils/base.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-vue/src/utils/fetch.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-vue/src/utils/listScroll.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-vue/src/utils/minxin.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-vue/vue.config.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/函数柯里化.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/深拷贝.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/网络协议" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/页面渲染过程" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/my-vue/src/layout/index.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/my-vue/src/routes/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/my-vue/src/views/dashboard/index.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/http状态码.md" beforeDir="false" afterPath="$PROJECT_DIR$/http状态码.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js实现bind.js" beforeDir="false" afterPath="$PROJECT_DIR$/js实现bind.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/如何定义一个高逼格的JS插件.js" beforeDir="false" afterPath="$PROJECT_DIR$/如何定义一个高逼格的JS插件.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,10 +17,10 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="XSLT Stylesheet" />
-        <option value="vue" />
         <option value="TypeScript File" />
         <option value="HTML File" />
         <option value="JavaScript File" />
+        <option value="vue" />
       </list>
     </option>
   </component>
@@ -72,7 +44,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../ts-react" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/my-vue/node_modules/@vue/cli-service/webpack.config.js" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -85,7 +57,7 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="settings.webpack" />
     <property name="ts.external.directory.path" value="D:\tool\WebStorm 2018.3\WebStorm 2020.1\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
   <component name="RunManager">
@@ -124,7 +96,7 @@
       <workItem from="1588990665861" duration="1404000" />
       <workItem from="1589276995136" duration="1677000" />
       <workItem from="1589282710676" duration="4695000" />
-      <workItem from="1590478410611" duration="34793000" />
+      <workItem from="1590478410611" duration="39314000" />
     </task>
     <servers />
   </component>
@@ -140,10 +112,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="687" y="320" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1590564521931" />
-    <state x="740" y="274" key="FileChooserDialogImpl" timestamp="1590571904594">
+    <state x="740" y="274" key="FileChooserDialogImpl" timestamp="1590659590702">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="740" y="274" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1590571904594" />
+    <state x="740" y="274" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1590659590702" />
     <state width="1899" height="282" key="GridCell.Tab.0.bottom" timestamp="1588132807443">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -160,9 +132,9 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1899" height="282" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1588132807443" />
-    <state x="134" y="162" width="1371" height="712" key="SettingsEditor" timestamp="1590570178760">
+    <state x="442" y="166" width="1371" height="712" key="SettingsEditor" timestamp="1590659592728">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="134" y="162" width="1371" height="712" key="SettingsEditor/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1590570178760" />
+    <state x="442" y="166" width="1371" height="712" key="SettingsEditor/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1590659592728" />
   </component>
 </project>
