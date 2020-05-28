@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+    /*const handler = {
+        set: function(obj, prop, value, receiver) {
+            console.log(receiver)
+            obj[prop] = receiver;
+        }
+    };
+    const proxy = new Proxy({}, handler);
+    const myObj = {};
+    Object.setPrototypeOf(myObj, proxy);
+
+    myObj.foo = 'bar';
+    console.log(myObj, myObj.foo === myObj);*/
+
+    /*const proxy = new Proxy(function() {
+        console.log(...arguments);
+        return [...arguments];
+    }, {
+        apply(target, ctx, args) {
+            console.log(target, ctx, args);
+            return Reflect.apply(...arguments);
+        },
+    });
+
+    console.log(proxy(1, 2, 3));*/
+
+    /*const proxy = new Proxy({}, {
+        has(target, key) {
+            console.log(target, key);
+        }
+    });
+
+    'a' in proxy;*/
+
+    /*const obj = {b: 1, [Symbol(1)]: 2};
+
+    const proxy = new Proxy(obj, {
+        defineProperty(target, key, descriptor) {
+            console.log(target, key, descriptor, '------------defineProperty');
+            return false;
+        },
+        getOwnPropertyDescriptor(target, key) {
+            console.log(target, key, '------------getOwnPropertyDescriptor');
+            return Object.getOwnPropertyDescriptor(target, key);
+        },
+        ownKeys(target) {
+            console.log(target, Reflect.ownKeys(target), '------------ownKeys');
+            return Reflect.ownKeys(target);
+        },
+        preventExtensions(target) {
+            Object.preventExtensions(target);
+            console.log(target);
+            return true
+        }
+    });
+
+    console.log(Object.preventExtensions(proxy));*/
+
+    const obj = { a: 1 };
+    const proxy = new Proxy(obj, {
+        set(target, key, value, receiver) {
+            const bool = Reflect.set(target, key, value);
+            console.log(bool);
+        }
+    })
+
+    proxy.a = 'mk';
+
+    console.log(obj, proxy);
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>

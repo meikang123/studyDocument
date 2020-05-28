@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <my-content></my-content>
+        <router-view></router-view>
+    </div>
+</body>
+</html>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="plugin.js"></script>
+<script src="promise.js"></script>
+<script>
+
+    Vue.use(VueRouter);
+
+    const index = { template: '<div>index</div>' };
+    const login = { template: '<div>login</div>' };
+
+    const routes = [{
+        path: '/',
+        name: 'index',
+        component: index
+    }, {
+        path: '/login',
+        name: 'login',
+        component: login
+    }]
+
+    const router = new VueRouter({ routes }); 
+
+    Vue.component('MyContent', {
+        template: '<div>Content</div>',
+        created() {
+            console.log(this.$router);
+        }
+    });
+
+    new Vue({
+        router,
+        created() {
+            // console.log(this, VueRouter);
+        }
+    }).$mount("#app");
+</script>

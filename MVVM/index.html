@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+    <input type="text" v-model='name'>
+    <div>{{name}}</div>
+    <div v-html="name"></div>
+</div>
+</body>
+</html>
+<script src="observe.js"></script>
+<script src="Dep.js"></script>
+<script src="watcher.js"></script>
+<script src="compile.js"></script>
+<script>
+
+    class Vue {
+        constructor(options) {
+            this.$el = options.el;
+            this.$data = options.data();
+            new Observer(this.$data, this);
+
+            // 执行编译
+            if(this.$el) new Compiler(this.$el, this);
+
+        }
+
+        $mount(el) {
+            this.$el = el;
+            // if(this.$el) new Compiler(this.$el, this);
+        }
+    }
+
+    const vm = new Vue({
+        el: '#app',
+        data() {
+            return {
+                name: 123,
+                test: {
+                    b: {
+                        c: 1
+                    }
+                }
+            }
+        }
+    });
+
+</script>
