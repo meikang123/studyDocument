@@ -8,17 +8,25 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
+// route
+import AuthRouter from './components/authroute/authRoute'
 import Login from './containers/login/login'
 import Registry from "./containers/registry/registry"
+import bossInfo from "./containers/bossInfo/bossInfo"
 
-const store = createStore(function() {
-    return {}
-}, compose(applyMiddleware(thunk)));
+
+
+// redux
+import reducer from "./reducer"
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+const store = createStore(reducer, composeEnhancers(applyMiddleware(thunk)));
 
 ReactDOM.render(
     <Provider store={store}>
         <BrowserRouter>
             <div>
+                <AuthRouter />
+                <Route path='/bossInfo' component={bossInfo}></Route>
                 <Route path='/login' component={Login}></Route>
                 <Route path='/registry' component={Registry}></Route>
             </div>

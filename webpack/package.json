@@ -1,0 +1,14 @@
+{
+  "name": "webpack",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "mk",
+  "license": "MIT",
+  "scripts": {
+    "dev": "cross-env NODE_ENV=production node build/index.js"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.2",
+    "webpack": "^4.43.0"
+  }
+}
