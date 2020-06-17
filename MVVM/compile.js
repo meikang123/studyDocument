@@ -2,10 +2,12 @@ class Compiler {
     constructor(el, vm) {
         this.vm = vm;
         this.$el = document.querySelector(el);
+        console.log(this.$el, '------------------kkk');
         if(this.$el) {
             // 将dom节点转换为Fragment提高执行效率
             this.$fragment = this.nodeToFragment(this.$el);
             this.compiler(this.$fragment);
+            console.log(this.$fragment, '------------------kkk');
             this.$el.appendChild(this.$fragment) // dom实例化
         }
     }
@@ -31,7 +33,7 @@ class Compiler {
     compiler(node) {
         const nodes = node.childNodes;
         [...nodes].forEach(item => {
-            console.log(item);
+            // console.log(item);
             if(this.isElementNode(item)) { // 标签
                 this.compileElement(item);
                 this.compiler(item);
@@ -43,9 +45,10 @@ class Compiler {
     }
 
     compileText(node, exp) { // 更新文本
-        new Watcher(this.vm, exp, function(value) {
+        const w = new Watcher(this.vm, exp, function(value) {
             node.textContent = value;
         })
+        w.update();
     }
 
     compileElement(node) {

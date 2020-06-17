@@ -10,7 +10,7 @@
                 default: 'default'
             }
         },
-        render(_, { props, children, parent, data }) {        
+        render(_, { props, children, parent, data }) {
             data.routerView = true;
             const h = parent.$createElement;
             const name = props.name;
@@ -29,8 +29,8 @@
     }
 
     const createRouteMap = function(routes, oldPathMap, oldNameMap) {
-        const pathMap = oldPathMap || Object.create(null);
-        const nameMap = oldNameMap || Object.create(null);
+        const pathMap = oldPathMap || {};
+        const nameMap = oldNameMap || {};
 
         routes.forEach(route => {
             pathMap[route.path] = route.component;
@@ -42,7 +42,7 @@
 
     const createMatcher = function(routes, router) {
         const { pathMap, nameMap } = createRouteMap(routes);
-        
+
         function match() {
 
         }
@@ -104,8 +104,8 @@
                 console.log(this, 123);
                 if(isDef(this.$options.router)) { // 根
                     this._routerRoot = this;
-                    this._router = this.$options.router; 
-                    this._router.init(this);               
+                    this._router = this.$options.router;
+                    this._router.init(this);
                     Vue.util.defineReactive(this, '_route', this._router.history);
                 } else {
                     this._routerRoot = (this.$parent && this.$parent._routerRoot) || this;

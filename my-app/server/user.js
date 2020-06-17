@@ -22,7 +22,7 @@ Router.get('/list', function(req, res) {
     // 清空数据
     // User.remove({}, function (e, d) { })
     User.find({}, function(err, doc) {
-        return res.json(doc);
+        return res.json({code: 0, data: doc});
     })
 })
 
