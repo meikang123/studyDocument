@@ -1,0 +1,24 @@
+{
+  "name": "vue-cli-service",
+  "version": "1.0.0",
+  "main": "index.js",
+  "bin": {
+    "vue-cli-service": "bin/vue-cli-service.js"
+  },
+  "scripts": {
+    "dev": "node ./bin/vue-cli-service.js"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "semver": "^7.3.2"
+  },
+  "engines": {
+    "node": ">=8"
+  },
+  "dependencies": {
+    "debug": "^4.1.1",
+    "minimist": "^1.2.5",
+    "read-pkg": "^5.2.0",
+    "webpack-merge": "^5.1.1"
+  }
+}

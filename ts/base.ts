@@ -46,7 +46,7 @@ function mab(): Ma | Mb {
 }
 
 function isSw(pm: Ma | Mb): pm is Ma {
-    return (<Ma>.s)
+    return
 }
 
 let pm = mab();
