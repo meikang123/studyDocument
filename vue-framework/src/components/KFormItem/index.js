@@ -13,11 +13,9 @@ const KFormItem = {
   components: { HocFormItem, HocInput },
 
   render() {
-    // console.log(this.$attrs)
+    console.log({...this.$attrs})
     return (<div>
-      <HocFormItem props={ this.$attrs }>
-        <hoc-input props={ this.$attrs } />;
-      </HocFormItem>
+      <HocFormItem { ...this.$attrs } />
     </div>);
   }
 };

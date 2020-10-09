@@ -11,6 +11,7 @@ module.exports = function(api) {
         "corejs": 3,
         // 配置需要兼容的版本
         "targets": {
+          "chrome": "40",
           "browsers": ["> 1%", "last 2 versions", "not ie <= 8"]
         }
       }

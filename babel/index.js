@@ -1,4 +1,7 @@
+import utils from './src/utils/index'
 import { getName } from "./utils";
+
+console.log(utils)
 
 let a = [1, 2, 3];
 const b = a.map(item => {
@@ -21,6 +24,19 @@ class Pro {
 
 const pro = new Pro(26);
 console.log(pro.getAge());
+
+
+const p = () => {
+  return new Promise((resolve => {
+    resolve(true);
+  }))
+}
+
+p.then(res => {
+  console.log(res);
+}).finally(() => {
+  console.log(2222);
+})
 
 export default {
   version: '1.0.0'

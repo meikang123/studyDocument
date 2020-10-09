@@ -247,4 +247,12 @@ const aa = (m, key) => {
 }
 aa(dd, 't')
 
+interface IData {
+  name: string
+}
+
+interface IAb {
+  data: IData | null
+}
+
 

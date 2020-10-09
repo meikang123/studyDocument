@@ -12,10 +12,6 @@
         {{value}}
       </el-form>
     </el-col>
-    <el-col :span="4">
-      <test :form-data="formData" />
-      {{formData.id}}-{{formData.age}}
-    </el-col>
   </el-row>
 </template>
 
@@ -23,12 +19,11 @@
 import { Input } from 'element-ui';
 import hoc from '@/utils/hoc';
 import KFormItem from '@/components/KFormItem'
-import Test from './components/test';
 
 const GtInput = hoc(Input);
 
 export default {
-  components: { GtInput, KFormItem, Test },
+  components: { GtInput, KFormItem },
 
   data() {
     return {

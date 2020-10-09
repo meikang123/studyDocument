@@ -3,12 +3,13 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "babel": "npx babel index.js --out-file out.js",
+    "babel": "npx babel ./src/utils/tool.js --out-file out.js",
+    "p": "npx babel index.js --out-file out.js",
     "dev": "nodemon out.js"
   },
   "license": "MIT",
   "devDependencies": {
-    "@babel/cli": "^7.10.5",
+    "@babel/cli": "7.2.0",
     "@babel/core": "^7.10.5",
     "@babel/helper-plugin-utils": "^7.10.4",
     "@babel/plugin-transform-arrow-functions": "^7.10.4",

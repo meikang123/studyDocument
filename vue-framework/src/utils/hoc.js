@@ -8,7 +8,7 @@ const hoc = (WrappedComponent) => {
         return vnode;
       })
 
-      console.log('22222');
+      console.log(this);
 
       return h(WrappedComponent, {
         on: this.$listeners,
