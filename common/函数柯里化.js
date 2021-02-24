@@ -3,13 +3,15 @@
 * 指的是将一个接受多个参数的函数 变为 接受一个参数返回一个函数的固定形式，这样便于再次调用，例如f(1)(2)
 * 柯里化（Currying）是把接受多个参数的函数变换成接受一个单一参数(最初函数的第一个参数)的函数，并且返回接受余下的参数且返回结果的新函数的技术。通俗点说就是将一个函数拆分成多个函数，是固定部分参数，返回一个接受剩余参数的函数，也称为部分计算函数，目的是为了缩小适用范围，创建一个针对性更强的函数。
 * 使用
+* 特性：参数复用、提前确认、延迟运行
 * */
 
 const add = function () {
     const arg = Array.prototype.slice.call(arguments);
     const _add = function() {
         const _arg = Array.prototype.slice.call(arguments);
-        arg.concat(_arg);
+        Array.prototype.push.apply(arg, _arg);
+        return _add
     }
 
     _add.toString = function() {

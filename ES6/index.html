@@ -7,81 +7,84 @@
 <body>
 
 <script>
-    /*const handler = {
-        set: function(obj, prop, value, receiver) {
-            console.log(receiver)
-            obj[prop] = receiver;
-        }
-    };
-    const proxy = new Proxy({}, handler);
-    const myObj = {};
-    Object.setPrototypeOf(myObj, proxy);
+/*var obj = {
+  name: 'mk',
+  get show() {
+    return this.name
+  }
+}
 
-    myObj.foo = 'bar';
-    console.log(myObj, myObj.foo === myObj);*/
+var cloneObj = {
+  name: 'kun'
+}
 
-    /*const proxy = new Proxy(function() {
-        console.log(...arguments);
-        return [...arguments];
-    }, {
-        apply(target, ctx, args) {
-            console.log(target, ctx, args);
-            return Reflect.apply(...arguments);
-        },
-    });
+console.log(obj.show)
+console.log(Reflect.get(obj, 'show', cloneObj))*/
 
-    console.log(proxy(1, 2, 3));*/
+// receiver -瑞C我
+// extensible 可扩展的 -一克S谈色包
+// race -瑞斯
+/*let p = {
+  name: 'mk'
+}
+const handler = {
+  set(target, key, value, receiver) {
+    console.log(receiver)
+    Reflect.set(target, key, value)
+  },
+  defineProperty(target, key, attribute) {
+    console.log(target, key, attribute)
+    Reflect.defineProperty(target, key, attribute)
+  }
+}
 
-    /*const proxy = new Proxy({}, {
-        has(target, key) {
-            console.log(target, key);
-        }
-    });
+const obj = new Proxy(p, handler)
 
-    'a' in proxy;*/
+obj.name = 'kun'
 
-    /*const obj = {b: 1, [Symbol(1)]: 2};
-
-    const proxy = new Proxy(obj, {
-        defineProperty(target, key, descriptor) {
-            console.log(target, key, descriptor, '------------defineProperty');
-            return false;
-        },
-        getOwnPropertyDescriptor(target, key) {
-            console.log(target, key, '------------getOwnPropertyDescriptor');
-            return Object.getOwnPropertyDescriptor(target, key);
-        },
-        ownKeys(target) {
-            console.log(target, Reflect.ownKeys(target), '------------ownKeys');
-            return Reflect.ownKeys(target);
-        },
-        preventExtensions(target) {
-            Object.preventExtensions(target);
-            console.log(target);
-            return true
-        }
-    });
-
-    console.log(Object.preventExtensions(proxy));*/
-
-    const obj = { a: 1 };
-    const proxy = new Proxy(obj, {
-        set(target, key, value, receiver) {
-            const bool = Reflect.set(target, key, value);
-            console.log(bool);
-        }
-    })
-
-    proxy.a = 'mk';
-
-    console.log(obj, proxy);
+console.log(obj, p)*/
 
 
+/*const p1 = new Promise((resolve, reject) => {
+  resolve('ok');
+  setTimeout(function () { throw new Error('test') }, 0)
+})
 
+try {
+  p1.then(res => {
+    console.log(res)
+    return 3
+  }).then(data => {
+    console.log(data)
+    return 4
+  })
+} catch (e) {
+  console.log(e, '-------------e')
+}
 
+Promise.prototype.finally = function() {
+  let P = this.constructor;
+  console.log(this, P)
 
+}
+p1.finally()*/
 
+/*const f = () => {
+  console.log('foo')
+}
 
+(async () => f())().then(() => {
+  console.log('start')
+})
+
+console.log('end')*/
+
+var arr = [1, 2, 3]
+
+const it = Array.prototype[Symbol.iterator].apply(arr)
+console.log(it.next())
+console.log(it.next())
+console.log(it.next())
 
 </script>
 </body>
